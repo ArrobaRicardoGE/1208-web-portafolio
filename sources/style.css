@@ -57,7 +57,7 @@ body {
     text-align: center;
 }
 
-footer {
+.main-footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -85,7 +85,7 @@ footer {
     margin-right: auto;
 }
 
-table {
+.skills-table {
     text-align: center;
     border: 10px solid black;
     border-radius: 10px;
@@ -93,16 +93,16 @@ table {
     width: 50%;
 }
 
-td,
-th {
+.skills-table__td,
+.skills-table__th {
     padding: 8px;
 }
 
-tr:nth-child(odd) {
+.skills-table__tr:nth-child(odd) {
     background-color: #dddddd;
 }
 
-tr.header {
+.skills-table__tr--header {
     background-color: black;
     color: white;
 }
@@ -134,17 +134,17 @@ tr.header {
     text-align: center;
 }
 
-form {
+.contact-form {
     display: block;
     margin: auto;
     width: 40%;
 }
 
-fieldset {
+.contact-form__fieldset {
     text-align: center;
 }
 
-.submit {
+.contact-form__submit {
     background-color: black;
     color: white;
     border: none;
