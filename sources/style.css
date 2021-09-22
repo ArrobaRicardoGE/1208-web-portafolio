@@ -24,11 +24,29 @@ body {
 }
 
 .navbar__li--lang {
+    float: left;
+    width: 18%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    transition: all 0.5s;
+    background-color: black;
     width: 10%;
     background-color: grey;
 }
 
 .navbar__li--selected {
+    float: left;
+    width: 18%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    transition: all 0.5s;
+    background-color: black;
     background-color: darkblue;
 }
 
@@ -81,7 +99,7 @@ th {
 }
 
 tr:nth-child(odd) {
-    background-color: #DDDDDD;
+    background-color: #dddddd;
 }
 
 tr.header {

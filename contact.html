@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="sources/style.css" />
+        <title>Contacto | Ricardo Gutiérrez</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="sources/style.css" />
-    <title>Contacto | Ricardo Gutiérrez</title>
-</head>
+    <body>
+        <navbar>
+            <ul class="navbar">
+                <li class="navbar__li">
+                    <a class="navbar__a" href="index.html">Índice</a>
+                </li>
+                <li class="navbar__li">
+                    <a class="navbar__a" href="skills.html">Habilidades</a>
+                </li>
+                <li class="navbar__li">
+                    <a class="navbar__a" href="assignments.html">Prácticas</a>
+                </li>
+                <li class="navbar__li">
+                    <a class="navbar__a" href="experience.html">Experiencia</a>
+                </li>
+                <li class="navbar__li--selected">
+                    <a class="navbar__a" href="#">Contacto</a>
+                </li>
+                <li class="navbar__li--lang">
+                    <a class="navbar__a" href="en/contact.html ">English</a>
+                </li>
+            </ul>
+        </navbar>
 
-<body>
-    <navbar>
-        <ul class="navbar">
-            <li><a href="index.html">Índice</a></li>
-            <li><a href="skills.html">Habilidades</a></li>
-            <li><a href="assignments.html">Prácticas</a></li>
-            <li><a href="experience.html">Experiencia</a></li>
-            <li class="selected"><a href="#">Contacto</a></li>
-            <li class="lang"><a href="en/contact.html ">English</a></li>
-        </ul>
-    </navbar>
+        <h1 class="main-title">Contacto</h1>
 
-    <h1 class="main-title">Contacto</h1>
+        <form method="POST">
+            <fieldset>
+                <legend>Deja tus datos y te contactaré:</legend>
+                <label for="name">Nombre</label>
+                <br />
+                <input type="text" name="name" />
+                <br />
+                <label for="email">Correo electrónico</label>
+                <br />
+                <input type="email" name="email" />
+                <br />
+                <label for="reason">Razón de contacto</label>
+                <br />
+                <textarea
+                    name="description"
+                    id="description"
+                    cols="30"
+                    rows="10"
+                    placeholder="Deja aquí tu mensaje."
+                ></textarea>
+                <br />
+                <input type="submit" class="submit" />
+            </fieldset>
+        </form>
 
-    <form method="POST">
-        <fieldset>
-            <legend>Deja tus datos y te contactaré:</legend>
-            <label for="name">Nombre</label>
-            <br />
-            <input type="text" name="name" />
-            <br />
-            <label for="email">Correo electrónico</label>
-            <br />
-            <input type="email" name="email" />
-            <br />
-            <label for="reason">Razón de contacto</label>
-            <br />
-            <textarea name="description" id="description" cols="30" rows="10" placeholder="Deja aquí tu mensaje."></textarea>
-            <br />
-            <input type="submit" class="submit" />
-        </fieldset>
-    </form>
+        <section class="card-center">
+            <p>
+                Twitter:
+                <a href="https://twitter.com/ArrobaRicardoGE"
+                    >@ArrobaRicardoGE</a
+                >
+            </p>
+            <p>
+                GitHub:
+                <a href="https://github.com/ArrobaRicardoGE">ArrobaRicardoGE</a>
+            </p>
+        </section>
 
-    <section class="card-center">
-        <p>
-            Twitter:
-            <a href="https://twitter.com/ArrobaRicardoGE">@ArrobaRicardoGE</a>
-        </p>
-        <p>
-            GitHub: <a href="https://github.com/ArrobaRicardoGE">ArrobaRicardoGE</a>
-        </p>
-    </section>
+        <div class="spacer"></div>
 
-    <div class="spacer"></div>
-
-    <footer>
-        <p>Hecho con ❤️ por &copy; Ricardo Gutiérrez</p>
-    </footer>
-</body>
-
+        <footer>
+            <p>Hecho con ❤️ por &copy; Ricardo Gutiérrez</p>
+        </footer>
+    </body>
 </html>
