@@ -1,0 +1,10 @@
+.div-block {
+    background-color: orange;
+    margin: 10px;
+}
+
+.div-inline {
+    background-color: greenyellow;
+    margin: 10px;
+    display: inline;
+}
