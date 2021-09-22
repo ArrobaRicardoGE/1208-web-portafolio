@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 06</title>
+    <style>
+        canvas {
+            border: 5px solid black;
+            display: inline;
+        }
+        
+        #canvas-cont {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center;color:gray;">Práctica 6: Canvas</h1>
+    <div id="canvas-cont">
+        <canvas id="canvas" width="350px" height="350px"></canvas>
+    </div>
+
+    <!-- En la parte de abajo para perf  -->
+    <script type="text/javascript">
+        let canvas = document.getElementById('canvas');
+        ctx = canvas.getContext('2d');
+        let w = canvas.width;
+        // Cara
+        ctx.beginPath();
+        ctx.arc(w / 2, w / 2, w / 3, 0, 2 * Math.PI);
+        ctx.stroke();
+        // Sonrisa
+        ctx.beginPath();
+        // ctx.arc(w / 2, w / 2, w / 2 - w / 3, Math.PI / 6, 5 * Math.PI / 6);
+        ctx.arc(w / 2, w / 2, w / 2 - w / 3, 0, Math.PI);
+        ctx.stroke();
+        // Ojo derecho 
+        ctx.beginPath();
+        ctx.arc(w / 2 - w / 10, w / 2 - w / 10, 5, 0, 2 * Math.PI)
+        ctx.stroke();
+        // Ojo izquierdo
+        ctx.beginPath();
+        ctx.arc(w / 2 + w / 10, w / 2 - w / 10, 5, 0, 2 * Math.PI)
+        ctx.stroke();
+    </script>
+</body>
+
+</html>
