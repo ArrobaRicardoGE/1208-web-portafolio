@@ -1,0 +1,24 @@
+.box1 {
+    width: 250px;
+    height: 250px;
+    background-color: thistle;
+    text-align: center;
+    font-size: 3em;
+}
+
+.box2 {
+    width: 250px;
+    height: 250px;
+    background-color: teal;
+    text-align: center;
+    font-size: 3em;
+}
+
+.box1 {
+    position: relative;
+    top: 15px;
+    left: 40px;
+    right: 30px;
+    bottom: 50px;
+    z-index: -1;
+}
