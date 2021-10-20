@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+}
+
+.title {
+    margin: auto;
+    text-align: center;
+}
+
+#botones {
+    display: flex;
+    justify-content: center;
+}
+
+#botones>div {
+    background-color: black;
+    border: black 10px solid;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    float: left;
+    margin: 20px;
+}
+
+#botones>div:hover {
+    cursor: pointer;
+}
+
+#texto {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+#status:hover {
+    cursor: pointer;
+}

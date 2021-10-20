@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Actividad 1</title>
+</head>
+
+<body>
+    <h1 style="text-align:center;color:gray;">Adivina el color!</h1>
+    <p>Ronda: <span id="ronda">1</span>/10</p>
+
+    <p id="texto">rgb(0, 0, 0)</p>
+
+    <div id="botones">
+        <div onclick="clicked(0)"></div>
+        <div onclick="clicked(1)"></div>
+        <div onclick="clicked(2)"></div>
+        <div onclick="clicked(3)"></div>
+        <div onclick="clicked(4)"></div>
+        <div onclick="clicked(5)"></div>
+    </div>
+
+    <p id="status" onclick="reset()"></p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
