@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>TODO</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>TODO</title>
-</head>
+    <body oncontextmenu="return false;">
+        <h1>Tareas</h1>
+        <p>
+            Escribe tu tarea y pulsa enter para agregar <br />
+            Click izquierdo para marcar como completado <br />
+            Click derecho para eliminar
+        </p>
+        <input
+            id="text"
+            type="text"
+            class="tasks-input"
+            placeholder="Escribe tu tarea..."
+        />
 
-<body oncontextmenu="return false;">
-    <h1>TODO List</h1>
-    <input id="text" type="text" class="tasks-input">
+        <div id="tasks" class="tasks-container"></div>
 
-    <div id="tasks" class="tasks-container">
-    </div>
-
-    <script src="script.js"></script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>

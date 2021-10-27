@@ -1,0 +1,76 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #c0c0aa; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #1cefff,
+        #c0c0aa
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #1cefff,
+        #c0c0aa
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 100px;
+    margin-bottom: 150px;
+    box-shadow: 10px, black;
+}
+
+.init {
+    margin: auto;
+    background-color: whitesmoke;
+    color: #b05dc2;
+    width: 30%;
+    min-height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.question {
+    width: 30%;
+    border-radius: 25px;
+    padding: 40px 100px;
+    background-color: whitesmoke;
+    margin: auto;
+}
+
+.question > p {
+    font-size: 24px;
+    font-weight: bolder;
+    color: #b05dc2;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.question > select {
+    width: 100%;
+    font-size: 18px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.question > button {
+    font-size: 18px;
+    font-weight: bolder;
+    display: block;
+    margin: auto;
+    border: 3px solid #b05dc2;
+    width: 30%;
+    height: 35px;
+    border-radius: 5px;
+    color: #b05dc2;
+}
+
+.question > button:hover {
+    border: 3px solid white;
+    color: whitesmoke;
+    background-color: #b05dc2;
+}
