@@ -1,58 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.navbar {
-    list-style-type: none;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0);
-    padding: 0;
-    margin: 0;
-    height: 6vh;
-}
-
-.navbar__li {
-    float: left;
-    width: 18%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3vh;
-    transition: all 0.5s;
-    background-color: black;
-}
-
-.navbar__li--lang {
-    float: left;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3vh;
-    transition: all 0.5s;
-    width: 10%;
-    background-color: grey;
-}
-
-.navbar__li--selected {
-    float: left;
-    width: 18%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3vh;
-    transition: all 0.5s;
-    background-color: black;
-    background-color: darkblue;
-}
-
-.navbar__a {
-    color: white;
-    text-decoration: none;
-    width: 100%;
-    text-align: center;
+    background-color: whitesmoke;
 }
 
 .main-footer {
@@ -65,46 +13,6 @@ body {
     text-align: center;
 }
 
-.main-title {
-    font-size: 100px;
-    text-align: center;
-}
-
-#portrait {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#about {
-    text-align: center;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.skills-table {
-    text-align: center;
-    border: 10px solid black;
-    border-radius: 10px;
-    margin: auto;
-    width: 50%;
-}
-
-.skills-table__td,
-.skills-table__th {
-    padding: 8px;
-}
-
-.skills-table__tr:nth-child(odd) {
-    background-color: #dddddd;
-}
-
-.skills-table__tr--header {
-    background-color: black;
-    color: white;
-}
-
 .spacer {
     height: 70px;
 }
@@ -115,39 +23,5 @@ body {
 }
 
 .practicas__a {
-    color: darkblue;
     text-decoration: none;
-}
-
-.card {
-    width: 50%;
-    display: block;
-    margin: auto;
-}
-
-.card-center {
-    width: 50%;
-    display: block;
-    margin: auto;
-    text-align: center;
-}
-
-.contact-form {
-    display: block;
-    margin: auto;
-    width: 40%;
-}
-
-.contact-form__fieldset {
-    text-align: center;
-}
-
-.contact-form__submit {
-    background-color: black;
-    color: white;
-    border: none;
-    width: 30%;
-    height: 30px;
-    font-size: 16px;
-    border-radius: 5px;
 }
