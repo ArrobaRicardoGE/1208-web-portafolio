@@ -43,7 +43,7 @@
                 >
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Dashboard</a>
+                            <a class="nav-link active" href="#">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contacto</a>
@@ -55,6 +55,64 @@
             </div>
         </nav>
 
+        <!-- Productos destacados (carrete) -->
+        <div class="container bg-dark">
+            <p class="bg-dark text-light fs-1 px-3 fw-bold my-4">
+                JUEGOS DESTACADOS
+            </p>
+            <div
+                id="indexCarousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+            >
+                <div class="carousel-indicators">
+                    <button
+                        type="button"
+                        data-bs-target="#indexCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#indexCarousel"
+                        data-bs-slide-to="1"
+                    ></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col" id="top1"></div>
+                            <div class="col" id="top2"></div>
+                            <div class="col" id="top3"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col" id="top4"></div>
+                            <div class="col" id="top5"></div>
+                            <div class="col" id="top6"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#indexCarousel"
+                    data-bs-slide="prev"
+                >
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#indexCarousel"
+                    data-bs-slide="next"
+                >
+                    <span class="carousel-control-next-icon"></span>
+                </button> -->
+            </div>
+        </div>
         <!-- Productos (lista completa) -->
         <div class="container mb-5" id="games">
             <p class="bg-dark text-light fs-1 px-3 fw-bold my-4">
