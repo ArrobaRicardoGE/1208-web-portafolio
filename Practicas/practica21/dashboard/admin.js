@@ -15,7 +15,7 @@ function populateGames() {
             comp.className = "row";
             document.getElementById("games").appendChild(comp);
         }
-        product = products[i];
+        let product = products[i];
         dummy.innerHTML = `
             <div class="col">
                 <div class="card mb-5 text-center pb-3">
