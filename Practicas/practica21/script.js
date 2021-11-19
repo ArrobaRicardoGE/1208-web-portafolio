@@ -6,7 +6,7 @@ function loadData() {
             price: 3199,
         },
         {
-            name: "Streer Fighter",
+            name: "Street Fighter",
             price: 129,
         },
         {
@@ -38,7 +38,7 @@ function loadData() {
             price: 1399,
         },
         {
-            name: "Genshi Impact",
+            name: "Genshin Impact",
             price: 189,
         },
     ]);

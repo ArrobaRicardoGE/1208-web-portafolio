@@ -8,7 +8,7 @@ function validate(page) {
 function populateGames() {
     let comp = null;
     let dummy = document.createElement("div");
-    products = JSON.parse(localStorage.products);
+    let products = JSON.parse(localStorage.products);
     for (let i = 0; i < products.length; i++) {
         if (i % 2 == 0) {
             comp = document.createElement("div");
@@ -23,47 +23,43 @@ function populateGames() {
                         ${product.name}
                     </div>
                     <p>Precio: \$${product.price}</p>
-                    <div><button class="btn btn-outline-dark">Editar</button></div>
+                    <div><button class="btn btn-outline-dark" onclick="update(${i})">Editar</button></div>
                 </div>
             </div>
         `;
         comp.appendChild(dummy.firstElementChild);
     }
-    products = shuffle(products);
-    for (let i = 1; i <= 6; i++) {
-        let col = document.getElementById("top" + i);
+    let randInts = [];
+    while (randInts.length < 6) {
+        let r = Math.floor(Math.random() * 9);
+        if (randInts.indexOf(r) === -1) randInts.push(r);
+    }
+    let cnt = 1;
+    randInts.forEach((i) => {
+        let col = document.getElementById("top" + cnt++);
         col.innerHTML = `
-            <div class="card mb-5 text-center pb-3">
+            <div class="card mb-5 text-center pb-3 text-white bg-dark">
                 <div class="card-header fs-5 fw-light">
                     ${products[i].name}
                 </div>
                 <p>Precio: \$${products[i].price}</p>
-                <div><button class="btn btn-outline-dark">Editar</button></div>
+                <div><button class="btn btn-outline-light" onclick="update(${i})">Editar</button></div>
             </div>
         `;
-    }
+    });
 }
 
-function shuffle(array) {
-    // Creditos: https://stackoverflow.com/a/2450976
-    // Esta función se usa para que las preguntas salgan en orden aleatorio
-    let currentIndex = array.length,
-        randomIndex;
-
-    // While there remain elements to shuffle...
-    while (currentIndex != 0) {
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        // And swap it with the current element.
-        [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex],
-            array[currentIndex],
-        ];
+function update(id) {
+    let newPrice = parseInt(prompt("Inserte el nuevo precio"));
+    if (!newPrice) {
+        alert("Precio inválido");
+        return;
     }
-
-    return array;
+    let products = JSON.parse(localStorage.products);
+    products[id].price = newPrice;
+    localStorage.setItem("products", JSON.stringify(products));
+    document.getElementById("games").innerHTML = "";
+    populateGames();
 }
 
 populateGames();
