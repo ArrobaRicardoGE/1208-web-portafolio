@@ -12,7 +12,7 @@ function loadData() {
             },
             {
                 name: "Rocket League",
-                price: "Free",
+                price: 9,
             },
             {
                 name: "Red Dead Redemption 2",

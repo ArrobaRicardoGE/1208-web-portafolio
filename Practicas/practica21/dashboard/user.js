@@ -23,7 +23,7 @@ function populateGames() {
                         ${product.name}
                     </div>
                     <p>Precio: \$${product.price}</p>
-                    <div><button class="btn btn-outline-dark">Comprar</button></div>
+                    <div><button class="btn btn-outline-dark" onclick="addToCart(${i})">Comprar</button></div>
                 </div>
             </div>
         `;
@@ -43,10 +43,19 @@ function populateGames() {
                     ${products[i].name}
                 </div>
                 <p>Precio: \$${products[i].price}</p>
-                <div><button class="btn btn-outline-light">Comprar</button></div>
+                <div><button class="btn btn-outline-light" onclick="addToCart(${i})">Comprar</button></div>
             </div>
         `;
     });
+}
+
+function addToCart(id) {
+    if (!localStorage.cart)
+        localStorage.cart = JSON.stringify(Array(10).fill(0));
+    let cart = JSON.parse(localStorage.cart);
+    cart[id]++;
+    localStorage.cart = JSON.stringify(cart);
+    alert("Producto añadido con éxito");
 }
 
 populateGames();
