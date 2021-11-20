@@ -10,8 +10,9 @@
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossorigin="anonymous"
         />
-        <title>Dashboard</title>
+        <title>Práctica 21</title>
     </head>
+
     <body>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -43,18 +44,18 @@
                 >
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="../dashboard/user.html"
+                            <a class="nav-link" href="../dashboard/admin.html"
                                 >Dashboard</a
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../contact.html"
-                                >Contacto</a
-                            >
+                            <a class="nav-link active" href="#">Contacto</a>
                         </li>
                     </ul>
-                    <p class="text-light my-auto">Hola, user</p>
-                    <a class="btn btn-outline-light mx-3" href="#">Carrito</a>
+                    <p class="text-light my-auto">Hola, admin</p>
+                    <a class="btn btn-outline-light mx-3" href="../inventory/"
+                        >Inventario</a
+                    >
                     <a class="btn btn-outline-danger" href="../../practica21/"
                         >Salir</a
                     >
@@ -63,19 +64,11 @@
         </nav>
 
         <div class="container" id="main-container">
-            <p class="bg-dark text-light fs-1 px-3 fw-bold my-4">
-                CARRITO DE COMPRAS
-            </p>
-            <ol class="list-group list-group" id="cart-list"></ol>
-            <div class="text-end my-3">
-                <button class="btn btn-primary" onclick="comprar()">
-                    Comprar
-                </button>
-            </div>
+            <p class="bg-dark text-light fs-1 px-3 fw-bold my-4">MENSAJES</p>
+            <ol class="list-group list-group" id="message-list"></ol>
         </div>
 
-        <script src="cart.js"></script>
-        <script>
+        <script src="messages.js">
             validate();
         </script>
         <script

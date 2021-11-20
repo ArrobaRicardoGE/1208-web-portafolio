@@ -10,15 +10,16 @@
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossorigin="anonymous"
         />
-        <title>Dashboard</title>
+        <title>Práctica 21</title>
     </head>
+
     <body>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img
-                        src="../assets/gamepad.png"
+                        src="assets/gamepad.png"
                         alt=""
                         width="24"
                         height="24"
@@ -43,40 +44,68 @@
                 >
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="../dashboard/user.html"
+                            <a class="nav-link" href="dashboard/user.html"
                                 >Dashboard</a
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../contact.html"
-                                >Contacto</a
-                            >
+                            <a class="nav-link active" href="#">Contacto</a>
                         </li>
                     </ul>
                     <p class="text-light my-auto">Hola, user</p>
-                    <a class="btn btn-outline-light mx-3" href="#">Carrito</a>
-                    <a class="btn btn-outline-danger" href="../../practica21/"
+                    <a class="btn btn-outline-light mx-3" href="cart/"
+                        >Carrito</a
+                    >
+                    <a class="btn btn-outline-danger" href="../practica21/"
                         >Salir</a
                     >
                 </div>
             </div>
         </nav>
-
-        <div class="container" id="main-container">
-            <p class="bg-dark text-light fs-1 px-3 fw-bold my-4">
-                CARRITO DE COMPRAS
-            </p>
-            <ol class="list-group list-group" id="cart-list"></ol>
-            <div class="text-end my-3">
-                <button class="btn btn-primary" onclick="comprar()">
-                    Comprar
-                </button>
+        <div class="card mt-5" style="width: 40%; margin: auto">
+            <div class="card-header">¿Tienes dudas? ¡Déjanos tu mensaje!</div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="user" class="form-label"
+                        >Correo Electrónico</label
+                    >
+                    <input type="email" class="form-control" id="email" />
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message"></textarea>
+                </div>
+                <div class="container text-center">
+                    <button
+                        onclick="sendMsg()"
+                        class="btn btn-primary align-self-center"
+                    >
+                        Enviar
+                    </button>
+                </div>
             </div>
         </div>
-
-        <script src="cart.js"></script>
         <script>
-            validate();
+            if (sessionStorage.user != "user") {
+                alert("Favor de identificarse como usuario.");
+                document.body.innerHTML = "";
+            }
+            function sendMsg() {
+                let email = document.getElementById("email");
+                let message = document.getElementById("message");
+                if (!localStorage.messages) {
+                    localStorage.messages = JSON.stringify([]);
+                }
+                let messages = JSON.parse(localStorage.messages);
+                messages.push({
+                    email: email.value,
+                    message: message.value,
+                });
+                localStorage.messages = JSON.stringify(messages);
+                alert("Mensaje enviado con éxito");
+                email.value = "";
+                message.value = "";
+            }
         </script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
