@@ -43,77 +43,33 @@
                 >
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Dashboard</a>
+                            <a class="nav-link" href="../dashboard/admin.html"
+                                >Dashboard</a
+                            >
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contacto</a>
                         </li>
                     </ul>
                     <p class="text-light my-auto">Hola, admin</p>
-                    <a class="btn btn-outline-light mx-3" href="../inventory/"
+                    <a class="btn btn-outline-light mx-3" href="#"
                         >Inventario</a
                     >
-                    <a
-                        class="btn btn-outline-danger"
-                        href="/Practicas/practica21/"
+                    <a class="btn btn-outline-danger" href="../../practica21/"
                         >Salir</a
                     >
                 </div>
             </div>
         </nav>
 
-        <!-- Productos destacados (carrete) -->
-        <div class="container">
-            <p class="bg-dark text-light fs-1 px-3 fw-bold my-4">
-                JUEGOS DESTACADOS
-            </p>
-            <div
-                id="indexCarousel"
-                class="carousel carousel-dark slide"
-                data-bs-ride="carousel"
-            >
-                <div class="carousel-indicators">
-                    <button
-                        type="button"
-                        data-bs-target="#indexCarousel"
-                        data-bs-slide-to="0"
-                        class="active"
-                    ></button>
-                    <button
-                        type="button"
-                        data-bs-target="#indexCarousel"
-                        data-bs-slide-to="1"
-                    ></button>
-                </div>
-
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col" id="top1"></div>
-                            <div class="col" id="top2"></div>
-                            <div class="col" id="top3"></div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col" id="top4"></div>
-                            <div class="col" id="top5"></div>
-                            <div class="col" id="top6"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Productos (lista completa) -->
-        <div class="container mb-5" id="games">
-            <p class="bg-dark text-light fs-1 px-3 fw-bold my-4">
-                CATÁLOGO DE JUEGOS
-            </p>
+        <div class="container" id="main-container">
+            <p class="bg-dark text-light fs-1 px-3 fw-bold my-4">INVENTARIO</p>
+            <ol class="list-group list-group" id="inventory-list"></ol>
         </div>
 
-        <script src="admin.js"></script>
+        <script src="inventory.js"></script>
         <script>
-            validate("admin");
+            validate();
         </script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
