@@ -2,6 +2,7 @@ function validate() {
     if (sessionStorage.user != "admin") {
         alert("Credenciales inválidas. No tiene permiso para ver esta página.");
         document.body.innerHTML = "";
+        window.location.replace("../");
     }
 }
 

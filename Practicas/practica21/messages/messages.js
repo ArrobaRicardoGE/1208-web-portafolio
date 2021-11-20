@@ -1,7 +1,9 @@
 function validate() {
+    console.log(sessionStorage.user);
     if ("admin" != sessionStorage.user) {
         alert("Credenciales inválidas. Favor de identificarse.");
         document.body.innerHTML = "";
+        window.location.replace("../");
     }
 }
 
@@ -29,4 +31,5 @@ function populate() {
     }
 }
 
+validate();
 populate();

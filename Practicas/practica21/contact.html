@@ -89,6 +89,7 @@
             if (sessionStorage.user != "user") {
                 alert("Favor de identificarse como usuario.");
                 document.body.innerHTML = "";
+                window.location.replace("./");
             }
             function sendMsg() {
                 let email = document.getElementById("email");

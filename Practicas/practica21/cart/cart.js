@@ -1,7 +1,8 @@
 function validate() {
-    if (!sessionStorage.user) {
-        alert("Favor de identificarse.");
+    if (sessionStorage.user != "user") {
         document.body.innerHTML = "";
+        alert("Favor de identificarse.");
+        window.location.replace("../");
     }
 }
 

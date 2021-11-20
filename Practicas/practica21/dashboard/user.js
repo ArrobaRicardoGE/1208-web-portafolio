@@ -2,6 +2,7 @@ function validate(page) {
     if (page != sessionStorage.user) {
         alert("Credenciales inválidas. Favor de identificarse.");
         document.body.innerHTML = "";
+        window.location.replace("../");
     }
 }
 
