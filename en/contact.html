@@ -82,7 +82,7 @@
         <h1 class="display-1 text-center mt-3">Contact</h1>
 
         <div class="container-sm mb-5">
-            <form method="post">
+            <div>
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
                     <input type="text" class="form-control" id="name" />
@@ -95,10 +95,20 @@
                     <label class="form-label" for="reason">Inquire</label>
                     <textarea id="reason" class="form-control"></textarea>
                 </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-dark">Submit</button>
+                <div class="mb-3">
+                    <label for="birthday">Birthday</label>
+                    <input type="date" class="form-control" id="birthday" />
                 </div>
-            </form>
+                <div class="text-center">
+                    <button
+                        type="submit"
+                        class="btn btn-dark"
+                        onclick="validate()"
+                    >
+                        Submit
+                    </button>
+                </div>
+            </div>
         </div>
 
         <section class="container-sm text-center">
@@ -132,5 +142,46 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
         ></script>
+        <script>
+            function getAge(dateString) {
+                var today = new Date();
+                var birthDate = new Date(dateString);
+                var age = today.getFullYear() - birthDate.getFullYear();
+                var m = today.getMonth() - birthDate.getMonth();
+                if (
+                    m < 0 ||
+                    (m === 0 && today.getDate() < birthDate.getDate())
+                ) {
+                    age--;
+                }
+                return age;
+            }
+
+            function validate() {
+                let name = document.getElementById("name");
+                let email = document.getElementById("email");
+                let reason = document.getElementById("reason");
+                let birthday = document.getElementById("birthday");
+                if (
+                    !name.value ||
+                    !email.value ||
+                    !reason.value ||
+                    !birthday.value
+                ) {
+                    alert("Error. All fields are required. Try again.");
+                    return;
+                }
+
+                if (getAge(birthday.value) < 18) {
+                    alert("Error. You must be 18 or older to send message.");
+                    return;
+                }
+                alert("Message sent.");
+                name.value = "";
+                email.value = "";
+                reason.value = "";
+                birthday.value = "";
+            }
+        </script>
     </body>
 </html>
