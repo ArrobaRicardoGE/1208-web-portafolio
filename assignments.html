@@ -81,7 +81,7 @@
 
         <h1 class="display-1 text-center mt-3">Prácticas</h1>
 
-        <section class="practicas">
+        <section class="practicas" id="practicas" style="display: none">
             <h2>Primer parcial</h2>
             <a class="practicas__a" href="/Practicas/practica01.html"
                 >Práctica 01: Noticia</a
@@ -166,6 +166,24 @@
             ><br />
         </section>
 
+        <div class="card mt-5" style="width: 40%; margin: auto" id="loginForm">
+            <div class="card-header">Ingrese Contraseña</div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" />
+                </div>
+                <div class="container text-center">
+                    <button
+                        onclick="login()"
+                        class="btn btn-primary align-self-center"
+                    >
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <div class="spacer"></div>
 
         <footer class="bg-dark text-center text-lg-start main-footer">
@@ -178,5 +196,18 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
         ></script>
+        <script>
+            function login() {
+                let password = document.getElementById("password").value;
+                if (password != "pa55word123") {
+                    alert("Contraseña incorrecta");
+                    return;
+                }
+                let loginForm = document.getElementById("loginForm");
+                let practicas = document.getElementById("practicas");
+                practicas.style.display = "block";
+                loginForm.style.display = "none";
+            }
+        </script>
     </body>
 </html>
